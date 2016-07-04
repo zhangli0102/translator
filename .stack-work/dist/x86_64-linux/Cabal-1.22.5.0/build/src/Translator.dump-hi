@@ -1,23 +1,28 @@
 
 ==================== FINAL INTERFACE ====================
-2016-07-04 00:03:00.131543 UTC
+2016-07-04 01:25:21.935386 UTC
 
 interface trans_7Z1wDWZ3VSoEPaDaYBr3lm:Translator 7103
-  interface hash: b3259f1d2b0a808870526f3bd6c1e903
-  ABI hash: 6e3236588ec5c03ced3adc5c68838cdb
-  export-list hash: a2e43758171a9fe322241648033eba0d
-  orphan hash: 7fdb5740074c5fe191fb74c8ea42095f
+  interface hash: 6377685c556d0bbc13f9503fbd93bfd5
+  ABI hash: 229cd0cef5e7399cf5cc5a4a124e38c5
+  export-list hash: d1d8fc4f9c841982ce4b830dd1faf024
+  orphan hash: e7e4bae67b8e67b0f4ee2cc2f199ba5f
   flag hash: 962af636f8e927040c7daa9c21457292
   sig of: Nothing
   used TH splices: False
   where
 exports:
   Translator.chToEng
+  Translator.chToGer
   Translator.chineseToEnglish
+  Translator.chineseToGerman
   Translator.engToCh
   Translator.englishToChinese
+  Translator.gerToCh
+  Translator.germanToChinese
   Translator.Chinese
   Translator.English
+  Translator.German
 module dependencies:
 package dependencies: array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
                       base-4.8.2.0* containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU
@@ -35,26 +40,26 @@ import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
 import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
 import  -/  containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map 1800ccac43fd924c376b60eac12f4d04
 import  -/  containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base 642e37808d03e24efbe8e8ff1336f343
-d6a8d3867aaabcfaa3004c14f25f0557
+1b46264466f9a902510ae709999813ea
   $sfromList ::
-    [(Translator.English, a)] -> Data.Map.Base.Map Translator.English a
+    [(Translator.German, a)] -> Data.Map.Base.Map Translator.German a
   {- Arity: 1, Strictness: <S,1*U>,
-     Unfolding: (\ @ a ds :: [(Translator.English, a)] ->
+     Unfolding: (\ @ a ds :: [(Translator.German, a)] ->
                  case ds of wild {
-                   [] -> Data.Map.Base.Tip @ Translator.English @ a
+                   [] -> Data.Map.Base.Tip @ Translator.German @ a
                    : ds1 ds2
                    -> case ds1 of wild1 { (,) kx x ->
                       case ds2 of wild2 {
                         []
                         -> case kx of dt { DEFAULT ->
                            Data.Map.Base.Bin
-                             @ Translator.English
+                             @ Translator.German
                              @ a
                              1
                              dt
                              x
-                             (Data.Map.Base.Tip @ Translator.English @ a)
-                             (Data.Map.Base.Tip @ Translator.English @ a) }
+                             (Data.Map.Base.Tip @ Translator.German @ a)
+                             (Data.Map.Base.Tip @ Translator.German @ a) }
                         : ipv ipv1
                         -> case ipv of wild3 { (,) ky ds3 ->
                            case GHC.Classes.$fOrd[]_$s$ccompare1 kx ky of wild4 {
@@ -63,13 +68,13 @@ d6a8d3867aaabcfaa3004c14f25f0557
                                 Translator.$sfromList1
                                   @ a
                                   (Data.Map.Base.Bin
-                                     @ Translator.English
+                                     @ Translator.German
                                      @ a
                                      1
                                      dt
                                      x
-                                     (Data.Map.Base.Tip @ Translator.English @ a)
-                                     (Data.Map.Base.Tip @ Translator.English @ a))
+                                     (Data.Map.Base.Tip @ Translator.German @ a)
+                                     (Data.Map.Base.Tip @ Translator.German @ a))
                                   wild2 }
                              GHC.Types.LT
                              -> case kx of dt { DEFAULT ->
@@ -77,44 +82,46 @@ d6a8d3867aaabcfaa3004c14f25f0557
                                   @ a
                                   1
                                   (Data.Map.Base.Bin
-                                     @ Translator.English
+                                     @ Translator.German
                                      @ a
                                      1
                                      dt
                                      x
-                                     (Data.Map.Base.Tip @ Translator.English @ a)
-                                     (Data.Map.Base.Tip @ Translator.English @ a))
+                                     (Data.Map.Base.Tip @ Translator.German @ a)
+                                     (Data.Map.Base.Tip @ Translator.German @ a))
                                   wild2 } } } } } }) -}
-d522e8831407de8ce4579e34a682fff7
+a28bc138783e49e76c3ccfad42cee946
   $sfromList1 ::
-    Data.Map.Base.Map Translator.English a1
-    -> [(Translator.English, a1)]
-    -> Data.Map.Base.Map Translator.English a1
+    Data.Map.Base.Map Translator.German a1
+    -> [(Translator.German, a1)]
+    -> Data.Map.Base.Map Translator.German a1
   {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
-e00e0e7aa1a58c8d9eaa0280c26206b4
+c15bbb6f69f701cffee66e96b2a8e015
   $sinsert_$sgo10 ::
-    Translator.English
+    Translator.German
     -> a1
-    -> Data.Map.Base.Map Translator.English a1
-    -> Data.Map.Base.Map Translator.English a1
+    -> Data.Map.Base.Map Translator.German a1
+    -> Data.Map.Base.Map Translator.German a1
   {- Arity: 3, Strictness: <S,1*U><L,U><S,1*U> -}
-ee1ab66950905ea1ab5355108342e10f
+dcd5b7d908dfe2f5d4f947e49e91e69f
   $slookup1 ::
-    Translator.Chinese
-    -> Data.Map.Base.Map Translator.Chinese a -> GHC.Base.Maybe a
+    Translator.German
+    -> Data.Map.Base.Map Translator.German a -> GHC.Base.Maybe a
   {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
-e9ab2484b5f83316a2c131e3043a08a0
+b6d12d5354863217457c32459add25aa
   $wpoly_go10 ::
     GHC.Prim.Int#
-    -> Data.Map.Base.Map Translator.English a
-    -> [(Translator.English, a)]
-    -> Data.Map.Base.Map Translator.English a
+    -> Data.Map.Base.Map Translator.German a
+    -> [(Translator.German, a)]
+    -> Data.Map.Base.Map Translator.German a
   {- Arity: 3, Strictness: <L,U><S,1*U><S,1*U>, Inline: [0] -}
 a8c48b059b28f190af9f080236312763
   type Chinese = GHC.Base.String
 9b85ab192eacbd8a3de114158767c3e7
   type English = GHC.Base.String
-c85e0a569cdd0445661a485547768f99
+2977bc39e53dbd4e0ef19ff17e15bee3
+  type German = GHC.Base.String
+d95766c9188dbe1d81ea725501239cae
   chToEng :: Translator.Chinese -> GHC.Base.Maybe Translator.English
   {- Arity: 1, Strictness: <S,1*U>,
      Unfolding: InlineRule (1, True, False)
@@ -123,7 +130,16 @@ c85e0a569cdd0445661a485547768f99
                    @ [GHC.Types.Char]
                    c
                    Translator.chineseToEnglish) -}
-8595f11ac84730daa7b3eb167eb9da34
+f087e19fea95442d8a559c40c20cfd28
+  chToGer :: Translator.Chinese -> GHC.Base.Maybe Translator.German
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ c :: Translator.Chinese ->
+                 Translator.$slookup1
+                   @ [GHC.Types.Char]
+                   c
+                   Translator.chineseToGerman) -}
+f4e446d7ff385c09cb078bcc56b6e41d
   chineseToEnglish ::
     Data.Map.Base.Map Translator.Chinese Translator.English
   {- Unfolding: (Translator.chineseToEnglish_go10
@@ -135,7 +151,19 @@ c85e0a569cdd0445661a485547768f99
     -> Data.Map.Base.Map Translator.English Translator.Chinese
     -> Data.Map.Base.Map Translator.Chinese Translator.English
   {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
-dfcf3118e3536bf35b7f7b31a9eb396b
+de962d64076a89f9d6b8406b88b678aa
+  chineseToGerman ::
+    Data.Map.Base.Map Translator.Chinese Translator.German
+  {- Unfolding: (Translator.chineseToGerman_go10
+                   (Data.Map.Base.Tip @ Translator.Chinese @ Translator.German)
+                   Translator.germanToChinese) -}
+9f6fb790bf8631af7c6e50fe5380f1c1
+  chineseToGerman_go10 ::
+    Data.Map.Base.Map Translator.Chinese Translator.German
+    -> Data.Map.Base.Map Translator.German Translator.Chinese
+    -> Data.Map.Base.Map Translator.Chinese Translator.German
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+b800447ac8a4324222b7faacf6b9955e
   engToCh :: Translator.English -> GHC.Base.Maybe Translator.Chinese
   {- Arity: 1, Strictness: <S,1*U>,
      Unfolding: InlineRule (1, True, False)
@@ -144,7 +172,7 @@ dfcf3118e3536bf35b7f7b31a9eb396b
                    @ [GHC.Types.Char]
                    e
                    Translator.englishToChinese) -}
-63f03500507c67f136f91db115e33ccc
+5d1806d54e4547017cebce5fee3247e6
   englishToChinese ::
     Data.Map.Base.Map Translator.English Translator.Chinese
   {- Unfolding: (Translator.$sfromList
@@ -304,8 +332,134 @@ a3c3216d3e0344c311aad87a36f2994b
                    @ (Translator.English, Translator.Chinese)
                    Translator.englishToChinese10
                    (GHC.Types.[] @ (Translator.English, Translator.Chinese))) -}
-"SPEC/Translator fromList @ English _" [ALWAYS] forall @ a
-                                                       $dOrd :: GHC.Classes.Ord Translator.English
+7154d86b3db0d43df7d2a94a99a4a0b6
+  gerToCh :: Translator.German -> GHC.Base.Maybe Translator.Chinese
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ g :: Translator.German ->
+                 Translator.$slookup1
+                   @ [GHC.Types.Char]
+                   g
+                   Translator.germanToChinese) -}
+5893aacf75b617fb1b5417581ed5def3
+  germanToChinese ::
+    Data.Map.Base.Map Translator.German Translator.Chinese
+  {- Unfolding: (Translator.$sfromList
+                   @ [GHC.Types.Char]
+                   Translator.germanToChinese1) -}
+2e999fd12b4c30a424d4585660b5f5a0
+  germanToChinese1 :: [(Translator.German, Translator.Chinese)]
+  {- Unfolding: (GHC.Types.:
+                   @ (Translator.German, Translator.Chinese)
+                   Translator.germanToChinese25
+                   Translator.germanToChinese2) -}
+ad40960b423a7f95214ada9cfd617d7b
+  germanToChinese10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Deutschland"#) -}
+9d2ef188c8baaffa395e44a2191a9740
+  germanToChinese11 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.germanToChinese13,
+                  Translator.germanToChinese12)) -}
+9302d4f103bc4bb541d391c8c3659cd4
+  germanToChinese12 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCStringUtf8#
+                   "\\232\\176\\162\\232\\176\\162"#) -}
+1322baf89d0a532c1f0331cc338e6e40
+  germanToChinese13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Danke"#) -}
+13e4e46474c37ab0818e2f858f08c996
+  germanToChinese14 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.germanToChinese16,
+                  Translator.germanToChinese15)) -}
+caeed9c2d49e9aacd32a4746abc20645
+  germanToChinese15 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCStringUtf8#
+                   "\\232\\139\\185\\230\\158\\156"#) -}
+5a8bc53968c10a534cf79dcc75c3ffec
+  germanToChinese16 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Apfel"#) -}
+0a6298be027a21f14f1394ce572da011
+  germanToChinese17 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.germanToChinese19,
+                  Translator.germanToChinese18)) -}
+ce329dc1cb5e95238b49ac2f45816f59
+  germanToChinese18 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCStringUtf8#
+                   "\\229\\156\\159\\232\\177\\134"#) -}
+687997c0009323ed18275b536f96e512
+  germanToChinese19 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Kartofel"#) -}
+0dcab011cc29ff15224b25d9f6bd9336
+  germanToChinese2 :: [(Translator.German, Translator.Chinese)]
+  {- Unfolding: (GHC.Types.:
+                   @ (Translator.German, Translator.Chinese)
+                   Translator.germanToChinese22
+                   Translator.germanToChinese3) -}
+4f2de492f6058b75dd5c00bd6ff05e69
+  germanToChinese20 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.germanToChinese21,
+                  Translator.englishToChinese32)) -}
+52e685604567c249f00872aa03091ee5
+  germanToChinese21 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Auf Wiedersehen"#) -}
+4754daee6e8b2ffaa5bf2201a26a34dd
+  germanToChinese22 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.germanToChinese24,
+                  Translator.germanToChinese23)) -}
+cf3ff2a07732b248667e51ddd3f169c5
+  germanToChinese23 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCStringUtf8#
+                   "\\230\\151\\169\\228\\184\\138\\229\\165\\189"#) -}
+228f9c9055946129ae64e270ed84f2ab
+  germanToChinese24 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Guten Morgen"#) -}
+a81ced78ab59560176d6fb34e6a73791
+  germanToChinese25 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.germanToChinese26,
+                  Translator.englishToChinese35)) -}
+c23a987dfa1ab5cb61ccd55b56f8398c
+  germanToChinese26 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Guten Tag"#) -}
+f52fd4db098bf6dd3526071a68c2438d
+  germanToChinese3 :: [(Translator.German, Translator.Chinese)]
+  {- Unfolding: (GHC.Types.:
+                   @ (Translator.German, Translator.Chinese)
+                   Translator.germanToChinese20
+                   Translator.germanToChinese4) -}
+b76bdfaaee3ce33f16324c56f6b01838
+  germanToChinese4 :: [(Translator.German, Translator.Chinese)]
+  {- Unfolding: (GHC.Types.:
+                   @ (Translator.German, Translator.Chinese)
+                   Translator.germanToChinese17
+                   Translator.germanToChinese5) -}
+f300d9c4a573fba9c8da1fa5203a771b
+  germanToChinese5 :: [(Translator.German, Translator.Chinese)]
+  {- Unfolding: (GHC.Types.:
+                   @ (Translator.German, Translator.Chinese)
+                   Translator.germanToChinese14
+                   Translator.germanToChinese6) -}
+cbd653a3e6dfa2f14395714b44a59b1c
+  germanToChinese6 :: [(Translator.German, Translator.Chinese)]
+  {- Unfolding: (GHC.Types.:
+                   @ (Translator.German, Translator.Chinese)
+                   Translator.germanToChinese11
+                   Translator.germanToChinese7) -}
+e07c5f4bd5768e0a32c599068ae67e34
+  germanToChinese7 :: [(Translator.German, Translator.Chinese)]
+  {- Unfolding: (GHC.Types.:
+                   @ (Translator.German, Translator.Chinese)
+                   Translator.germanToChinese8
+                   (GHC.Types.[] @ (Translator.German, Translator.Chinese))) -}
+4e3556def638cc7455317185c931bf3a
+  germanToChinese8 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.germanToChinese10,
+                  Translator.germanToChinese9)) -}
+a8592ce9cfeb290d46fc759d5219aeaf
+  germanToChinese9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCStringUtf8#
+                   "\\229\\190\\183\\229\\155\\189"#) -}
+"SPEC/Translator fromList @ German _" [ALWAYS] forall @ a
+                                                      $dOrd :: GHC.Classes.Ord Translator.German
   Data.Map.Base.fromList @ [GHC.Types.Char] @ a $dOrd
   = Translator.$sfromList @ a
 vectorised variables:

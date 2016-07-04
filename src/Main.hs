@@ -1,13 +1,13 @@
 module Main where
 
 import Control.Monad (forever, when)
-import Translator (chToEng, engToCh)
+import Translator (chToEng, engToCh, chToGer, gerToCh)
 import System.Environment (getArgs)
 import System.Exit (exitFailure, exitSuccess)
 import System.IO (hGetLine, hIsEOF, stdin)
 
-transferToEnglish :: IO()
-transferToEnglish = forever $ do
+chineseToEnglish :: IO()
+chineseToEnglish = forever $ do
   weAreDone <- hIsEOF stdin
   when weAreDone exitSuccess
 
@@ -25,8 +25,8 @@ transferToEnglish = forever $ do
             putStrLn $ "Error: " ++ line
             exitFailure
 
-transferToChinese :: IO()
-transferToChinese = forever $ do
+englishToChinese :: IO()
+englishToChinese = forever $ do
   weAreDone <- hIsEOF stdin
   when weAreDone exitSuccess
 
@@ -35,10 +35,48 @@ transferToChinese = forever $ do
 
   where
     convertLine line = do
-      let chinese =engToCh line
+      let chinese = engToCh line
       case chinese of
         (Just str)
           -> putStrLn str
+        Nothing
+          -> do
+            putStrLn $ "Error: " ++ line
+            exitFailure
+
+chineseToGerman :: IO()
+chineseToGerman = forever $ do
+  weAreDone <- hIsEOF stdin
+  when weAreDone exitSuccess
+
+  line <- hGetLine stdin
+  convertLine line
+
+  where
+    convertLine line = do
+      let german = chToGer line
+      case german of
+        (Just str)
+          -> putStrLn str 
+        Nothing
+          -> do
+            putStrLn $ "Error: " ++ line
+            exitFailure
+
+germanToChinese :: IO()
+germanToChinese = forever $ do
+  weAreDone <- hIsEOF stdin
+  when weAreDone exitSuccess
+
+  line <- hGetLine stdin
+  convertLine line
+
+  where
+    convertLine line = do
+      let chinese = gerToCh line
+      case chinese of
+        (Just str)
+          -> putStrLn str 
         Nothing
           -> do
             putStrLn $ "Error: " ++ line
@@ -51,8 +89,10 @@ main = do
   case mode of 
     [arg] ->
       case arg of
-        "engch" -> transferToChinese
-        "cheng" -> transferToEnglish
+        "engch" -> englishToChinese
+        "cheng" -> chineseToEnglish
+        "gerch" -> germanToChinese
+        "chger" -> chineseToGerman
         _       -> argError
     _ -> argError
 
