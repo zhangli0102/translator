@@ -18,6 +18,11 @@ englishToChinese = M.fromList [
   , ("bye", "再见")
   , ("how are you", "你好吗")
   , ("pretty good", "很好")
+  , ("Li Zhang", "张立")
+  , ("What the hell", "去他妈的")
+  , ("What a day", "今天真烦")
+  , ("delicious", "好吃")
+  , ("Functional Programming", "函数式编程")
   ]
 
 chineseToEnglish :: M.Map Chinese English

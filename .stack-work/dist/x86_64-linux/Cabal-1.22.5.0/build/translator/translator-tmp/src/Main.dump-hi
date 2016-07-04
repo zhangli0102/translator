@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2016-07-03 23:06:36.434028 UTC
+2016-07-04 00:03:00.953199 UTC
 
 interface main@main:Main 7103
-  interface hash: eeb5db35b4c813ce1b509298f71463e9
+  interface hash: f71ced6642cd4e2b3dbbfa42bc0b7459
   ABI hash: bb0ecb36854e4cae85418d89eadfeca7
   export-list hash: 334b77a1695dd82a6853033c688c8679
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
@@ -38,10 +38,10 @@ import  -/  base-4.8.2.0:System.Environment ba6e36000c8274703cf7786fbe8d0f6c
 import  -/  base-4.8.2.0:System.Exit f5581af4ad998e898da01fdc74c2769b
 import  -/  base-4.8.2.0:System.IO 0248c1e850b7ea124cf7a2e1669ebf67
 import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
-import  -/  Translator 7749aa7f59cbd92b0e3bdd0f7625e5bf
+import  -/  Translator 152458c45ca5db5756737d7da842a44f
   exports: 1007b96d65a4eaad40b5bbb4efd21ace
-  chToEng c7ab985be6209afc4aace4b50ff93a4b
-  engToCh 637706b6c4e2d961db014f9cb872ea25
+  chToEng 98aa1ba737ab942b7cbfa9f3df5c6ef4
+  engToCh d29b158903ee3ef898dc89ca7361497b
 8017bfb1d2ccac9221ba75ec48bf99b8
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <L,U>,
