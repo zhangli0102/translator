@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2016-07-04 01:25:22.829075 UTC
+2016-07-04 14:26:25.163132 UTC
 
 interface main@main:Main 7103
-  interface hash: 1383c81c1a282d8bfc27ebdda24ef075
-  ABI hash: c303974b24d32dc2f3b6928d62125aee
-  export-list hash: eb42b0367d514b5953494cce918a7ed0
+  interface hash: 796950185a9da7d45f8763e0db7a7812
+  ABI hash: 2aa47a3212d20997743fc8920b4decc8
+  export-list hash: e01985c29426ff5e8fe9c2c6a52e1214
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 97381452716c356acaa4382230a95935
   sig of: Nothing
@@ -15,7 +15,9 @@ exports:
   Main.chineseToEnglish
   Main.chineseToGerman
   Main.englishToChinese
+  Main.englishToGerman
   Main.germanToChinese
+  Main.germanToEnglish
   Main.main
 module dependencies: Translator
 package dependencies: array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
@@ -40,12 +42,14 @@ import  -/  base-4.8.2.0:System.Environment ba6e36000c8274703cf7786fbe8d0f6c
 import  -/  base-4.8.2.0:System.Exit f5581af4ad998e898da01fdc74c2769b
 import  -/  base-4.8.2.0:System.IO 0248c1e850b7ea124cf7a2e1669ebf67
 import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
-import  -/  Translator db78e0be725a768c72049c9fd9974501
-  exports: b51f7469871d5384189032d0e6e7faad
-  chToEng df5299b237b4f8fa7ec9b94fa9ec24f3
-  chToGer 22d2a070858d274630fc0c1e03a357ff
-  engToCh 357d470d6dfcfacf8916379ebe51e1f7
-  gerToCh 2c388b87e997233eddfe97b95958ae9a
+import  -/  Translator 81a257e52403319fe5430ffeacb1fdc8
+  exports: c9040bc7c4967adffb6a77546f42799f
+  chToEng 1da47d247d6c0e49464e3802f1aebd74
+  chToGer 17d98e5e28761efca53092e1e4e50935
+  engToCh b3e0ca9a49b4e8fcd98267ef27b0a7a0
+  engToGer 958a64df38c86f57f496b2c6808016a6
+  gerToCh ad6efb06ac2fc0a5f26533df03452755
+  gerToEng d5233e410082e496ffe8ac2e7bcf90d4
 2a17d82d52b12f3cf566801abfeb537a
   chineseToEnglish :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <L,U>,
@@ -80,6 +84,16 @@ d6ff441585d61a9cee0d4180f20787d1
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1, Strictness: <L,U> -}
+ba0776be32c6fbb6bb6e6659858512f4
+  englishToGerman :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.englishToGerman1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+6c2b5ffc86eaae19d97f0937db0d5026
+  englishToGerman1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U> -}
 2a8bdffd1671f80ef2c84dfa56dbb36e
   germanToChinese :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <L,U>,
@@ -90,12 +104,22 @@ d6ff441585d61a9cee0d4180f20787d1
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1, Strictness: <L,U> -}
-8ef547ba6589f6cbf92a5321f1d20127
+69f0469f9d2421f5759a548ff91e8f7b
+  germanToEnglish :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.germanToEnglish1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+bc24b39695304f0aedb8ab380577a49d
+  germanToEnglish1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U> -}
+4570b37a67b4b4c8962f889b690beba2
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <L,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
-8c7f958b322428c3435c174d023e32d6
+afb6b73eb9786b4c7433c98c49a4186b
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -103,37 +127,57 @@ d6ff441585d61a9cee0d4180f20787d1
      Unfolding: (\ s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
                  case System.Environment.getArgs1 s of ds1 { (#,#) ipv ipv1 ->
                  case ipv1 of wild {
-                   [] -> Main.main6 @ () ipv
+                   [] -> Main.main8 @ () ipv
                    : arg ds
                    -> case ds of wild1 {
                         []
-                        -> case GHC.Base.eqString arg Main.main5 of wild2 {
+                        -> case GHC.Base.eqString arg Main.main7 of wild2 {
                              GHC.Types.False
-                             -> case GHC.Base.eqString arg Main.main4 of wild3 {
+                             -> case GHC.Base.eqString arg Main.main6 of wild3 {
                                   GHC.Types.False
-                                  -> case GHC.Base.eqString arg Main.main3 of wild4 {
+                                  -> case GHC.Base.eqString arg Main.main5 of wild4 {
                                        GHC.Types.False
-                                       -> case GHC.Base.eqString arg Main.main2 of wild5 {
-                                            GHC.Types.False -> Main.main6 @ () ipv
-                                            GHC.Types.True -> Main.germanToChinese1 ipv }
+                                       -> case GHC.Base.eqString arg Main.main4 of wild5 {
+                                            GHC.Types.False
+                                            -> case GHC.Base.eqString arg Main.main3 of wild6 {
+                                                 GHC.Types.False
+                                                 -> case GHC.Base.eqString arg Main.main2 of wild7 {
+                                                      GHC.Types.False -> Main.main8 @ () ipv
+                                                      GHC.Types.True -> Main.germanToEnglish1 ipv }
+                                                 GHC.Types.True -> Main.germanToChinese1 ipv }
+                                            GHC.Types.True -> Main.englishToGerman1 ipv }
                                        GHC.Types.True -> Main.englishToChinese1 ipv }
                                   GHC.Types.True -> Main.chineseToGerman1 ipv }
                              GHC.Types.True -> Main.chineseToEnglish1 ipv }
-                        : ipv2 ipv3 -> Main.main6 @ () ipv } } }) -}
-6b64fa45828cb837bb9922feb3cf0e5e
+                        : ipv2 ipv3 -> Main.main8 @ () ipv } } }) -}
+7681c1c07bb92831d2121cbcab1c98a9
+  main10 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R))) -}
+a551f28b5c0737b43ac945fca03d66d7
   main2 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "gerch"#) -}
-22b511c471bd4ffadac7e1b930fb1a41
+  {- Unfolding: (GHC.CString.unpackCString# "gereng"#) -}
+06b5ad7580b78487d5fbc75a6680e9cd
   main3 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "engch"#) -}
-119170ed6299b5363b15dc7594600313
+  {- Unfolding: (GHC.CString.unpackCString# "gerch"#) -}
+7691fe8b356f6b0f85dc829943dd93e9
   main4 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "chger"#) -}
-d5c110abdcfeec185aae29f994eb4aef
+  {- Unfolding: (GHC.CString.unpackCString# "engger"#) -}
+d81bd4d919522471026c15e732775fc9
   main5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "engch"#) -}
+42ed4efdbfe79bb62b5c1785d9587587
+  main6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "chger"#) -}
+347662a766a6c4a7e037801ef1e80fcb
+  main7 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "cheng"#) -}
-68e9d40434a2ebc85d3fd71a5b253e02
-  main6 ::
+96f6a7ef715d27393918ee5410779cda
+  main8 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, b #)
   {- Arity: 1, Strictness: <L,U>,
@@ -141,22 +185,14 @@ d5c110abdcfeec185aae29f994eb4aef
                    s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
                  case GHC.IO.Handle.Text.hPutStr2
                         GHC.IO.Handle.FD.stdout
-                        Main.main7
+                        Main.main9
                         GHC.Types.True
                         s of ds1 { (#,#) ipv ipv1 ->
                  System.Exit.die2 @ b ipv }) -}
-e80e5995dbfea28de1d35b68381539e1
-  main7 :: [GHC.Types.Char]
+d989030a024e37e264f963c7de4cdd28
+  main9 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
-                   "Please specify the first argument as being 'engch' or 'cheng'"#) -}
-1163bc61d5cdf47c22aded2bfe94009c
-  main8 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 1,
-     Unfolding: (GHC.TopHandler.runMainIO1
-                   @ ()
-                   Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R))) -}
+                   "Please specify the first argument as being 'engch', 'cheng', 'chger', 'gerch', 'engger' or 'gereng'"#) -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

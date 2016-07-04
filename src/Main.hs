@@ -1,7 +1,7 @@
 module Main where
 
 import Control.Monad (forever, when)
-import Translator (chToEng, engToCh, chToGer, gerToCh)
+import Translator (chToEng, engToCh, chToGer, gerToCh, engToGer, gerToEng)
 import System.Environment (getArgs)
 import System.Exit (exitFailure, exitSuccess)
 import System.IO (hGetLine, hIsEOF, stdin)
@@ -82,6 +82,45 @@ germanToChinese = forever $ do
             putStrLn $ "Error: " ++ line
             exitFailure
 
+englishToGerman :: IO()
+englishToGerman = forever $ do
+  weAreDone <- hIsEOF stdin
+  when weAreDone exitSuccess
+
+  line <- hGetLine stdin
+  convertLine line
+
+  where
+    convertLine line = do
+      let german = engToGer line
+      case german of
+        (Just str)
+          -> putStrLn str 
+        Nothing
+          -> do
+            putStrLn $ "Error: " ++ line
+            exitFailure
+
+germanToEnglish :: IO()
+germanToEnglish = forever $ do
+  weAreDone <- hIsEOF stdin
+  when weAreDone exitSuccess
+
+  line <- hGetLine stdin
+  convertLine line
+
+  where
+    convertLine line = do
+      let english = gerToEng line
+      case english of
+        (Just str)
+          -> putStrLn str 
+        Nothing
+          -> do
+            putStrLn $ "Error: " ++ line
+            exitFailure
+
+
 
 main :: IO()
 main = do
@@ -93,11 +132,13 @@ main = do
         "cheng" -> chineseToEnglish
         "gerch" -> germanToChinese
         "chger" -> chineseToGerman
+        "engger" -> englishToGerman
+        "gereng" -> germanToEnglish
         _       -> argError
     _ -> argError
 
     where argError = do
-            putStrLn "Please specify the first argument as being 'engch' or 'cheng'"
+            putStrLn "Please specify the first argument as being 'engch', 'cheng', 'chger', 'gerch', 'engger' or 'gereng'"
             exitFailure
 
 

@@ -6,10 +6,14 @@ module Translator
     , chineseToEnglish
     , germanToChinese
     , chineseToGerman
+    , englishToGerman
+    , germanToEnglish
     , engToCh
     , chToEng
     , gerToCh
     , chToGer
+    , engToGer
+    , gerToEng
     ) where
 
 import qualified Data.Map as M
@@ -22,17 +26,13 @@ englishToChinese :: (M.Map English Chinese)
 englishToChinese = M.fromList [
     ("hello", "你好")
   , ("bye", "再见")
-  , ("how are you", "你好吗")
-  , ("pretty good", "很好")
+  , ("How are you", "你好吗")
+  , ("Pretty good", "很好")
   , ("Li Zhang", "张立")
-  , ("What the hell", "去他妈的")
   , ("What a day", "今天真烦")
   , ("delicious", "好吃")
   , ("Functional Programming", "函数式编程")
   ]
-
-chineseToEnglish :: M.Map Chinese English
-chineseToEnglish = M.foldWithKey (flip M.insert) M.empty englishToChinese
 
 germanToChinese :: (M.Map German Chinese)
 germanToChinese = M.fromList [
@@ -45,8 +45,24 @@ germanToChinese = M.fromList [
   , ("Deutschland", "德国")
   ]
 
+englishToGerman :: (M.Map English German)
+englishToGerman = M.fromList [
+    ("Good morning", "Guten Morgen")
+  , ("See you", "Auf wiedersehen")
+  , ("Germany", "Deutschland")
+  , ("star", "Stern")
+  , ("time", "Zeit")
+  , ("champion", "Meister")
+  ]
+
+chineseToEnglish :: M.Map Chinese English
+chineseToEnglish = M.foldWithKey (flip M.insert) M.empty englishToChinese
+
 chineseToGerman :: M.Map Chinese German
 chineseToGerman = M.foldWithKey (flip M.insert) M.empty germanToChinese
+
+germanToEnglish :: M.Map German English
+germanToEnglish = M.foldWithKey (flip M.insert) M.empty englishToGerman
 
 engToCh :: English -> Maybe Chinese
 engToCh e = M.lookup e englishToChinese
@@ -60,3 +76,9 @@ gerToCh g = M.lookup g germanToChinese
 
 chToGer :: Chinese -> Maybe German
 chToGer c = M.lookup c chineseToGerman
+
+engToGer :: English -> Maybe German
+engToGer e = M.lookup e englishToGerman
+
+gerToEng :: German -> Maybe English
+gerToEng g = M.lookup g germanToEnglish
