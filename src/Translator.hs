@@ -43,6 +43,7 @@ germanToChinese = M.fromList [
   , ("Apfel", "苹果")
   , ("Danke", "谢谢")
   , ("Deutschland", "德国")
+  , ("Trost", "安慰")
   ]
 
 englishToGerman :: (M.Map English German)
@@ -53,6 +54,7 @@ englishToGerman = M.fromList [
   , ("star", "Stern")
   , ("time", "Zeit")
   , ("champion", "Meister")
+  , ("comfort", "Trost")
   ]
 
 chineseToEnglish :: M.Map Chinese English
