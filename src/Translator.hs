@@ -55,6 +55,8 @@ englishToGerman = M.fromList [
   , ("time", "Zeit")
   , ("champion", "Meister")
   , ("comfort", "Trost")
+  , ("potato", "Kartofel")
+  , ("apple", "Apfel")
   ]
 
 chineseToEnglish :: M.Map Chinese English
