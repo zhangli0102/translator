@@ -33,6 +33,7 @@ englishToChinese = M.fromList [
   , ("delicious", "好吃")
   , ("Functional Programming", "函数式编程")
   , ("Signal Vine", "信号藤")
+  , ("bamboo flute", "竹笛")
   ]
 
 germanToChinese :: (M.Map German Chinese)
