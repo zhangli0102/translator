@@ -59,6 +59,7 @@ englishToGerman = M.fromList [
   , ("comfort", "Trost")
   , ("potato", "Kartofel")
   , ("apple", "Apfel")
+  , ("water", "Wasser")
   ]
 
 chineseToEnglish :: M.Map Chinese English
