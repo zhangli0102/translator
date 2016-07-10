@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2016-07-05 17:52:08.387853 UTC
+2016-07-10 23:09:59.688362 UTC
 
 interface main@main:Translator 7103
-  interface hash: 77c9db27cac355ad8fe8a3a276d0cc47
-  ABI hash: 76ffb2215465dbd55b9f253cf6a67816
+  interface hash: 6fc9294a6ca88d3e3dbff901d0cd7249
+  ABI hash: f85846d909726b5a0cf64de1b13128a6
   export-list hash: c9040bc7c4967adffb6a77546f42799f
   orphan hash: 011ca624f9ada0ac203545d83a9815ca
   flag hash: f6c6f4fd25ff6dfaa7a16e675409e1e9
@@ -125,7 +125,7 @@ a67d88338882234a82f4f30c72955411
   type English = GHC.Base.String
 920e8edcb9d82d4f384453773b61e89e
   type German = GHC.Base.String
-1da47d247d6c0e49464e3802f1aebd74
+1b0698d9c7fe3ec5a8e1c38406f476e6
   chToEng :: Translator.Chinese -> GHC.Base.Maybe Translator.English
   {- Arity: 1, Strictness: <S,1*U>,
      Unfolding: InlineRule (1, True, False)
@@ -134,7 +134,7 @@ a67d88338882234a82f4f30c72955411
                    @ [GHC.Types.Char]
                    c
                    Translator.chineseToEnglish) -}
-c9d9feab3c45526bedeac52739ea6975
+094d79a28df5ead984a6cd1c737c15a3
   chToGer :: Translator.Chinese -> GHC.Base.Maybe Translator.German
   {- Arity: 1, Strictness: <S,1*U>,
      Unfolding: InlineRule (1, True, False)
@@ -143,7 +143,7 @@ c9d9feab3c45526bedeac52739ea6975
                    @ [GHC.Types.Char]
                    c
                    Translator.chineseToGerman) -}
-79b1c9496061c78c37fbe28cfeebccc5
+4cdc02ede4db3e67d222ff980d2e633f
   chineseToEnglish ::
     Data.Map.Base.Map Translator.Chinese Translator.English
   {- Unfolding: (Translator.chineseToEnglish_go10
@@ -155,7 +155,7 @@ c9d9feab3c45526bedeac52739ea6975
     -> Data.Map.Base.Map Translator.English Translator.Chinese
     -> Data.Map.Base.Map Translator.Chinese Translator.English
   {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
-ddac111bfed77b2468c32d858381fc07
+cd0eaa10c910de01efc018f30b0f7d8c
   chineseToGerman ::
     Data.Map.Base.Map Translator.Chinese Translator.German
   {- Unfolding: (Translator.chineseToGerman_go10
@@ -167,7 +167,7 @@ ddac111bfed77b2468c32d858381fc07
     -> Data.Map.Base.Map Translator.German Translator.Chinese
     -> Data.Map.Base.Map Translator.Chinese Translator.German
   {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
-b3e0ca9a49b4e8fcd98267ef27b0a7a0
+8e7639a99bedba1172ec498d9395779a
   engToCh :: Translator.English -> GHC.Base.Maybe Translator.Chinese
   {- Arity: 1, Strictness: <S,1*U>,
      Unfolding: InlineRule (1, True, False)
@@ -176,7 +176,7 @@ b3e0ca9a49b4e8fcd98267ef27b0a7a0
                    @ [GHC.Types.Char]
                    e
                    Translator.englishToChinese) -}
-7dc6833a723d4cdc886bc53903767195
+0dd2f525b61c519ab269c4cac8de0811
   engToGer :: Translator.English -> GHC.Base.Maybe Translator.German
   {- Arity: 1, Strictness: <S,1*U>,
      Unfolding: InlineRule (1, True, False)
@@ -185,259 +185,389 @@ b3e0ca9a49b4e8fcd98267ef27b0a7a0
                    @ [GHC.Types.Char]
                    e
                    Translator.englishToGerman) -}
-0383610ee074b0ac9eea6260c6dc0996
+7e0473d416833ddb9be5d68ad17627c3
   englishToChinese ::
     Data.Map.Base.Map Translator.English Translator.Chinese
   {- Unfolding: (Translator.$sfromList
                    @ [GHC.Types.Char]
                    Translator.englishToChinese1) -}
-40c94033b317e74a35a2e0180e5e1f72
+9d3fff323afb2ba9c28598d0068ade9d
   englishToChinese1 :: [(Translator.English, Translator.Chinese)]
   {- Unfolding: (GHC.Types.:
                    @ (Translator.English, Translator.Chinese)
-                   Translator.englishToChinese30
+                   Translator.englishToChinese46
                    Translator.englishToChinese2) -}
-6e39ef26ce030dd22f6981ee32c82384
-  englishToChinese10 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCStringUtf8#
-                   "\\229\\135\\189\\230\\149\\176\\229\\188\\143\\231\\188\\150\\231\\168\\139"#) -}
-0121173fd8a29f05915e16074eba370a
-  englishToChinese11 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString#
-                   "Functional Programming"#) -}
-bc8513821277932d17b7d76db72dc219
-  englishToChinese12 :: ([GHC.Types.Char], [GHC.Types.Char])
-  {- Unfolding: ((Translator.englishToChinese14,
-                  Translator.englishToChinese13)) -}
-5ca62c5ec5c69df08dd4c8c159c6175b
-  englishToChinese13 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCStringUtf8#
-                   "\\229\\165\\189\\229\\144\\131"#) -}
-ae20b5c8af94b42b56d54e5880f8c0fb
+0fff68cd6867e0e2c5597f44fe3f4d7b
+  englishToChinese10 :: [(Translator.English, Translator.Chinese)]
+  {- Unfolding: (GHC.Types.:
+                   @ (Translator.English, Translator.Chinese)
+                   Translator.englishToChinese19
+                   Translator.englishToChinese11) -}
+3a11437437c1fd01f4d3fd60f19d3733
+  englishToChinese11 :: [(Translator.English, Translator.Chinese)]
+  {- Unfolding: (GHC.Types.:
+                   @ (Translator.English, Translator.Chinese)
+                   Translator.englishToChinese16
+                   Translator.englishToChinese12) -}
+cebb06c54ccac507c1b3c608e1b806b3
+  englishToChinese12 :: [(Translator.English, Translator.Chinese)]
+  {- Unfolding: (GHC.Types.:
+                   @ (Translator.English, Translator.Chinese)
+                   Translator.englishToChinese13
+                   (GHC.Types.[] @ (Translator.English, Translator.Chinese))) -}
+26188d6764d29e06711f52308a060391
+  englishToChinese13 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.englishToChinese15,
+                  Translator.englishToChinese14)) -}
+5fb64fb34eb3699408794a6d69e15e21
   englishToChinese14 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "delicious"#) -}
-5508f2e05838aed4e0609806a5657d92
-  englishToChinese15 :: ([GHC.Types.Char], [GHC.Types.Char])
-  {- Unfolding: ((Translator.englishToChinese17,
-                  Translator.englishToChinese16)) -}
-57ef497de955c1635f11c84ca372c0b3
-  englishToChinese16 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCStringUtf8#
-                   "\\228\\187\\138\\229\\164\\169\\231\\156\\159\\231\\131\\166"#) -}
-97f1d468baf7ce70f6b954b716821364
+                   "\\229\\165\\179\\228\\186\\186"#) -}
+6a9f8cdd3ff9a187c6898d3d51ee7d52
+  englishToChinese15 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "woman"#) -}
+683e073275911846b0e4d61b314e771d
+  englishToChinese16 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.englishToChinese18,
+                  Translator.englishToChinese17)) -}
+f28234b4f84206bb521161f429e2e738
   englishToChinese17 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "What a day"#) -}
-e6ca88d0ab4932765935538e7039124f
-  englishToChinese18 :: ([GHC.Types.Char], [GHC.Types.Char])
-  {- Unfolding: ((Translator.englishToChinese20,
-                  Translator.englishToChinese19)) -}
-c29d44a0a68e5e43c3470708920f86d0
-  englishToChinese19 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCStringUtf8#
-                   "\\229\\188\\160\\231\\171\\139"#) -}
-0b65037a8476ef775fefc55ea8f6dadf
+                   "\\231\\148\\183\\228\\186\\186"#) -}
+6615ac28f8a59804567fc0e5cd4163d8
+  englishToChinese18 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "man"#) -}
+5476795cbae47114bb0905aa4153feb6
+  englishToChinese19 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.englishToChinese21,
+                  Translator.englishToChinese20)) -}
+c327d278f157ef9d34bbea69d3c1dd48
   englishToChinese2 :: [(Translator.English, Translator.Chinese)]
   {- Unfolding: (GHC.Types.:
                    @ (Translator.English, Translator.Chinese)
-                   Translator.englishToChinese27
+                   Translator.englishToChinese43
                    Translator.englishToChinese3) -}
-a6b4acfc6fa2de32793ed5dc1da191a5
+da4a7119ea1697a8ba5b92e57f211299
   englishToChinese20 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "Li Zhang"#) -}
-e0bf3e43f88cd8487fa25357738c3d0f
-  englishToChinese21 :: ([GHC.Types.Char], [GHC.Types.Char])
-  {- Unfolding: ((Translator.englishToChinese23,
-                  Translator.englishToChinese22)) -}
-771bfd6dddece935870a4f256534ad6c
-  englishToChinese22 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCStringUtf8#
-                   "\\229\\190\\136\\229\\165\\189"#) -}
-a47307c7e4a5cb8297a7fdefd6e26c8a
+                   "\\231\\171\\185\\231\\172\\155"#) -}
+9a60ede44d2b28251e3a21d0b80880c8
+  englishToChinese21 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "bamboo flute"#) -}
+225c78dbf5f9f9ac407bae2fd6a5ce1d
+  englishToChinese22 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.englishToChinese24,
+                  Translator.englishToChinese23)) -}
+ae46f9a31e28644915989164d82fe6a7
   englishToChinese23 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "Pretty good"#) -}
-eb8dfce713e78f23cc0e6bd7fa8d3e89
-  englishToChinese24 :: ([GHC.Types.Char], [GHC.Types.Char])
-  {- Unfolding: ((Translator.englishToChinese26,
-                  Translator.englishToChinese25)) -}
-9a2ba2836b1f439d511676fe8c000ac2
-  englishToChinese25 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCStringUtf8#
-                   "\\228\\189\\160\\229\\165\\189\\229\\144\\151"#) -}
-79d6b30bd74da1fe65b07aa49eabfcf1
+                   "\\228\\191\\161\\229\\143\\183\\232\\151\\164"#) -}
+869ff8376d910b92d21418d96bc13f2f
+  englishToChinese24 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Signal Vine"#) -}
+2b7e3e041793fc439035b12ab2be6538
+  englishToChinese25 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.englishToChinese27,
+                  Translator.englishToChinese26)) -}
+540c3954edbb04f643e76dc32a3c87fd
   englishToChinese26 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "How are you"#) -}
-263c0cddc39232f9b9f4f34a31b81330
-  englishToChinese27 :: ([GHC.Types.Char], [GHC.Types.Char])
-  {- Unfolding: ((Translator.englishToChinese29,
-                  Translator.englishToChinese28)) -}
-79fb387ecc7bbe8da6bfda55230b17c0
-  englishToChinese28 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCStringUtf8#
-                   "\\229\\134\\141\\232\\167\\129"#) -}
-d9df9906943ae18057fb90a37adc9667
+                   "\\229\\135\\189\\230\\149\\176\\229\\188\\143\\231\\188\\150\\231\\168\\139"#) -}
+235695a1cdbcf0ea03754084a2b11629
+  englishToChinese27 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Functional Programming"#) -}
+21c3b712d698d500f8a3993f41758760
+  englishToChinese28 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.englishToChinese30,
+                  Translator.englishToChinese29)) -}
+330d8d86cc5e7950b185eea3b82113ca
   englishToChinese29 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "bye"#) -}
-d8b8b786ebd429b8f100cb3a647830ce
+  {- Unfolding: (GHC.CString.unpackCStringUtf8#
+                   "\\229\\165\\189\\229\\144\\131"#) -}
+ea30ba561b97a516730d5d40a62ccd48
   englishToChinese3 :: [(Translator.English, Translator.Chinese)]
   {- Unfolding: (GHC.Types.:
                    @ (Translator.English, Translator.Chinese)
-                   Translator.englishToChinese24
+                   Translator.englishToChinese40
                    Translator.englishToChinese4) -}
-0d5dd9ca4314413cdcc64bae9b02abef
-  englishToChinese30 :: ([GHC.Types.Char], [GHC.Types.Char])
-  {- Unfolding: ((Translator.englishToChinese32,
-                  Translator.englishToChinese31)) -}
-3b7a7f986a0d8e51c8c0c21ccec7a125
-  englishToChinese31 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCStringUtf8#
-                   "\\228\\189\\160\\229\\165\\189"#) -}
-7cd3a6d4c5830ad6275aa5118833b8cc
+3c876671be1c949860275ba22f6b8941
+  englishToChinese30 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "delicious"#) -}
+a8bc3d61d6350122cb25e7f3f6c8d6ec
+  englishToChinese31 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.englishToChinese33,
+                  Translator.englishToChinese32)) -}
+111913ecd3dd585b81c9dd24c765bd83
   englishToChinese32 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "hello"#) -}
-54b38fc814690351e5a69d774b8e4f47
+  {- Unfolding: (GHC.CString.unpackCStringUtf8#
+                   "\\228\\187\\138\\229\\164\\169\\231\\156\\159\\231\\131\\166"#) -}
+2c79618d32bff639698da886e98ce469
+  englishToChinese33 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "What a day"#) -}
+c7dcf3b77744e38606fcd7b81a3dc717
+  englishToChinese34 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.englishToChinese36,
+                  Translator.englishToChinese35)) -}
+805d4b6e763925840149e09b08a8b511
+  englishToChinese35 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCStringUtf8#
+                   "\\229\\188\\160\\231\\171\\139"#) -}
+672b0111c4ffa9eafc2ceff1c8f67527
+  englishToChinese36 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Li Zhang"#) -}
+ba3f6b6c534cd4603a81c68a62cd1be2
+  englishToChinese37 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.englishToChinese39,
+                  Translator.englishToChinese38)) -}
+4bbffd06e334a5e5d3dcb02129d61532
+  englishToChinese38 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCStringUtf8#
+                   "\\229\\190\\136\\229\\165\\189"#) -}
+83d9ee4e0f5b634f7a55d04ef79dee63
+  englishToChinese39 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Pretty good"#) -}
+581a2897caa8b1ebd2bd5ff76fdda5a2
   englishToChinese4 :: [(Translator.English, Translator.Chinese)]
   {- Unfolding: (GHC.Types.:
                    @ (Translator.English, Translator.Chinese)
-                   Translator.englishToChinese21
+                   Translator.englishToChinese37
                    Translator.englishToChinese5) -}
-87a5251eb59c796bd2806f4704d8cd58
+b19b5e1ed8a0da541fe01b9fa2bd3718
+  englishToChinese40 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.englishToChinese42,
+                  Translator.englishToChinese41)) -}
+35d5465d30af4bd93c1742c5def47a4f
+  englishToChinese41 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCStringUtf8#
+                   "\\228\\189\\160\\229\\165\\189\\229\\144\\151"#) -}
+856714324fb66a7550bf618f641375ea
+  englishToChinese42 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "How are you"#) -}
+ce8063b0dc5e8b42e06abb61360f89b3
+  englishToChinese43 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.englishToChinese45,
+                  Translator.englishToChinese44)) -}
+050735861096b6a6fc4700641c560691
+  englishToChinese44 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCStringUtf8#
+                   "\\229\\134\\141\\232\\167\\129"#) -}
+1fc286202daf43fec54140206fd5bb7f
+  englishToChinese45 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "bye"#) -}
+47cfa68145e7e381de811493e0986d24
+  englishToChinese46 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.englishToChinese48,
+                  Translator.englishToChinese47)) -}
+2aaa06cf787c53738574b468fab92366
+  englishToChinese47 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCStringUtf8#
+                   "\\228\\189\\160\\229\\165\\189"#) -}
+ceec2f726d2cbc40d474b0459b1b4c4e
+  englishToChinese48 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "hello"#) -}
+457e79314d1c82f0ffc6025018486759
   englishToChinese5 :: [(Translator.English, Translator.Chinese)]
   {- Unfolding: (GHC.Types.:
                    @ (Translator.English, Translator.Chinese)
-                   Translator.englishToChinese18
+                   Translator.englishToChinese34
                    Translator.englishToChinese6) -}
-db08641537e7bc05068e96fd093c261a
+7ac7430936653ebf7aaabc9abbd0c664
   englishToChinese6 :: [(Translator.English, Translator.Chinese)]
   {- Unfolding: (GHC.Types.:
                    @ (Translator.English, Translator.Chinese)
-                   Translator.englishToChinese15
+                   Translator.englishToChinese31
                    Translator.englishToChinese7) -}
-8f16b91ee096bb845adae8ad3e22af25
+f6c0733d7946a1b0e4d8e83544866b6c
   englishToChinese7 :: [(Translator.English, Translator.Chinese)]
   {- Unfolding: (GHC.Types.:
                    @ (Translator.English, Translator.Chinese)
-                   Translator.englishToChinese12
+                   Translator.englishToChinese28
                    Translator.englishToChinese8) -}
-23ad5e52ab4e727c1249fc6ec6053465
+b32531a56685d2b98e8056340a6dee72
   englishToChinese8 :: [(Translator.English, Translator.Chinese)]
   {- Unfolding: (GHC.Types.:
                    @ (Translator.English, Translator.Chinese)
-                   Translator.englishToChinese9
-                   (GHC.Types.[] @ (Translator.English, Translator.Chinese))) -}
-5c104a4461bf0908d7df2fdbf09a48e8
-  englishToChinese9 :: ([GHC.Types.Char], [GHC.Types.Char])
-  {- Unfolding: ((Translator.englishToChinese11,
-                  Translator.englishToChinese10)) -}
-d29ffeaa81cafc472bb263e4a2323a05
+                   Translator.englishToChinese25
+                   Translator.englishToChinese9) -}
+c48bdae95c4e04586ab2b73f2ece81d5
+  englishToChinese9 :: [(Translator.English, Translator.Chinese)]
+  {- Unfolding: (GHC.Types.:
+                   @ (Translator.English, Translator.Chinese)
+                   Translator.englishToChinese22
+                   Translator.englishToChinese10) -}
+2be427e2f8edc47cb8e7e24da38b3453
   englishToGerman ::
     Data.Map.Base.Map Translator.English Translator.German
   {- Unfolding: (Translator.$sfromList
                    @ [GHC.Types.Char]
                    Translator.englishToGerman1) -}
-b927fc10282fa7419117c57e326d6034
+eb7257432de8994453acc010c41aa951
   englishToGerman1 :: [(Translator.English, Translator.German)]
   {- Unfolding: (GHC.Types.:
                    @ (Translator.English, Translator.German)
-                   Translator.englishToGerman24
+                   Translator.englishToGerman38
                    Translator.englishToGerman2) -}
-d7e56213484959d6cd5869d0d6d3bdc5
-  englishToGerman10 :: ([GHC.Types.Char], [GHC.Types.Char])
-  {- Unfolding: ((Translator.englishToGerman12,
-                  Translator.englishToGerman11)) -}
-db5bfc047b11d54490f0b6f5452e127c
-  englishToGerman11 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "Meister"#) -}
-13053e0a477b5b61d37003d528436465
-  englishToGerman12 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "champion"#) -}
-bde9c3f2e515a8212f238d46e4e897db
-  englishToGerman13 :: ([GHC.Types.Char], [GHC.Types.Char])
-  {- Unfolding: ((Translator.englishToGerman15,
-                  Translator.englishToGerman14)) -}
-b798831788e9313ef282f890249905c8
-  englishToGerman14 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "Zeit"#) -}
-d6e8354386357637cceb7b40acf4c952
-  englishToGerman15 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "time"#) -}
-b31568c4f87548a4f30df8b608e5a69d
-  englishToGerman16 :: ([GHC.Types.Char], [GHC.Types.Char])
-  {- Unfolding: ((Translator.englishToGerman18,
-                  Translator.englishToGerman17)) -}
-9950bd000f109ec0dfb99593cb587ef9
-  englishToGerman17 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "Stern"#) -}
-f1cebddc3bc26ca50797586155c24cfa
-  englishToGerman18 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "star"#) -}
-7c7535a289d96b8d46e8491ed77722f2
-  englishToGerman19 :: ([GHC.Types.Char], [GHC.Types.Char])
-  {- Unfolding: ((Translator.englishToGerman20,
-                  Translator.germanToChinese14)) -}
-65fedbd51d9694d932368ff106fff966
-  englishToGerman2 :: [(Translator.English, Translator.German)]
+19a7f72af45a23efdb4a30a7ac23a1e1
+  englishToGerman10 :: [(Translator.English, Translator.German)]
   {- Unfolding: (GHC.Types.:
                    @ (Translator.English, Translator.German)
-                   Translator.englishToGerman21
-                   Translator.englishToGerman3) -}
-f13760152a5f44997c9a753ec6b0d9da
-  englishToGerman20 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "Germany"#) -}
-71fb98f2e154d578db7da9bb10d41aea
-  englishToGerman21 :: ([GHC.Types.Char], [GHC.Types.Char])
-  {- Unfolding: ((Translator.englishToGerman23,
-                  Translator.englishToGerman22)) -}
-708cee50bb547eae7bbc6e7faab00c07
-  englishToGerman22 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "Auf wiedersehen"#) -}
-5e5c0e17354b913a9b8ee278a93d7444
-  englishToGerman23 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "See you"#) -}
-d7eab983f9ee05006e4d076b908948e9
-  englishToGerman24 :: ([GHC.Types.Char], [GHC.Types.Char])
-  {- Unfolding: ((Translator.englishToGerman25,
-                  Translator.germanToChinese28)) -}
-b70ca5544b664f098347df7eea573d28
-  englishToGerman25 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "Good morning"#) -}
-d9b0bc5dbba9645be6491473d4c40085
-  englishToGerman3 :: [(Translator.English, Translator.German)]
+                   Translator.englishToGerman15
+                   Translator.englishToGerman11) -}
+ea56d7987a0211ef42eda5bd66ea0481
+  englishToGerman11 :: [(Translator.English, Translator.German)]
   {- Unfolding: (GHC.Types.:
                    @ (Translator.English, Translator.German)
-                   Translator.englishToGerman19
-                   Translator.englishToGerman4) -}
-909f3a16b52e3df22859414920baa984
-  englishToGerman4 :: [(Translator.English, Translator.German)]
-  {- Unfolding: (GHC.Types.:
-                   @ (Translator.English, Translator.German)
-                   Translator.englishToGerman16
-                   Translator.englishToGerman5) -}
-578237e4bdabea8e0820197f2f68a6e6
-  englishToGerman5 :: [(Translator.English, Translator.German)]
+                   Translator.englishToGerman14
+                   Translator.englishToGerman12) -}
+ca2084322a719178e89d3346120e054a
+  englishToGerman12 :: [(Translator.English, Translator.German)]
   {- Unfolding: (GHC.Types.:
                    @ (Translator.English, Translator.German)
                    Translator.englishToGerman13
+                   (GHC.Types.[] @ (Translator.English, Translator.German))) -}
+18f9d727bfe9de6122e71714a332bea5
+  englishToGerman13 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.englishToChinese18,
+                  Translator.germanToChinese14)) -}
+cba5e5a1e440f887d7da6409cd98a87c
+  englishToGerman14 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.englishToChinese15,
+                  Translator.germanToChinese12)) -}
+d2c17697a048fbc7a0a90b92542f8cc7
+  englishToGerman15 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.englishToGerman17,
+                  Translator.englishToGerman16)) -}
+76cd427df6f0a2f3d06943bcb5422d53
+  englishToGerman16 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Wasser"#) -}
+fca99f237dd76eaae041725c32b22025
+  englishToGerman17 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "water"#) -}
+93b31feecf6079d42d3e5f864e91f0e6
+  englishToGerman18 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.englishToGerman19,
+                  Translator.germanToChinese26)) -}
+4ef3ca4c53ee4901f123e29879222b22
+  englishToGerman19 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "apple"#) -}
+c9d28bf797d089065e924bd79e896cbc
+  englishToGerman2 :: [(Translator.English, Translator.German)]
+  {- Unfolding: (GHC.Types.:
+                   @ (Translator.English, Translator.German)
+                   Translator.englishToGerman35
+                   Translator.englishToGerman3) -}
+c876cdb9f882c37419bb39763d4997a1
+  englishToGerman20 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.englishToGerman21,
+                  Translator.germanToChinese29)) -}
+1834912ae77ceed62ed4190f017c7dd0
+  englishToGerman21 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "potato"#) -}
+bb34fb27c22f68f2e539b21d6d1a2365
+  englishToGerman22 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.englishToGerman23,
+                  Translator.germanToChinese17)) -}
+c95a383d2455f58f53fc4bc57f358e48
+  englishToGerman23 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "comfort"#) -}
+e1d9b30c47a1a861345cb5ca760ad2b9
+  englishToGerman24 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.englishToGerman26,
+                  Translator.englishToGerman25)) -}
+5b1cbfaae87262a1355109558a04935e
+  englishToGerman25 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Meister"#) -}
+5b1f17b41d6d56c4c662fc002ac6777d
+  englishToGerman26 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "champion"#) -}
+a1c45b4c8d1082c535dc2dc7e166cf78
+  englishToGerman27 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.englishToGerman29,
+                  Translator.englishToGerman28)) -}
+0d338fa36ee91fb4b0075559eee0555e
+  englishToGerman28 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Zeit"#) -}
+5a6a99487c025eaa1c908db7304b552d
+  englishToGerman29 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "time"#) -}
+adf96a025f0ab4cb1989ce2294263032
+  englishToGerman3 :: [(Translator.English, Translator.German)]
+  {- Unfolding: (GHC.Types.:
+                   @ (Translator.English, Translator.German)
+                   Translator.englishToGerman33
+                   Translator.englishToGerman4) -}
+b5c93915cf0886f299ad6639b6aed82f
+  englishToGerman30 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.englishToGerman32,
+                  Translator.englishToGerman31)) -}
+c129d22c6c5af319de5df14a88ed532d
+  englishToGerman31 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Stern"#) -}
+255fb7e46301d5d71392d8ff4a67e5fd
+  englishToGerman32 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "star"#) -}
+ec5dba70060bc8975e287a21b9cc1d4c
+  englishToGerman33 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.englishToGerman34,
+                  Translator.germanToChinese20)) -}
+e9a67778ca8043ce3d8a31ebe29a4d0c
+  englishToGerman34 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Germany"#) -}
+7cd6614e1862494a48a80201477e7f30
+  englishToGerman35 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.englishToGerman37,
+                  Translator.englishToGerman36)) -}
+492d4e0ac4623e1e208fa322012ab4bd
+  englishToGerman36 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Auf wiedersehen"#) -}
+d21bb2cc9cf246b187ec4d3095d605ef
+  englishToGerman37 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "See you"#) -}
+b9e03a3bfc6ddde20a35ac02f124fe6c
+  englishToGerman38 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.englishToGerman39,
+                  Translator.germanToChinese34)) -}
+fadfd3bea222224fcf92262204fca2eb
+  englishToGerman39 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Good morning"#) -}
+d3f2dd20e8028e1415e71fa212533d9f
+  englishToGerman4 :: [(Translator.English, Translator.German)]
+  {- Unfolding: (GHC.Types.:
+                   @ (Translator.English, Translator.German)
+                   Translator.englishToGerman30
+                   Translator.englishToGerman5) -}
+9b3a6bdae4f3e27b4ed57f2d396fb967
+  englishToGerman5 :: [(Translator.English, Translator.German)]
+  {- Unfolding: (GHC.Types.:
+                   @ (Translator.English, Translator.German)
+                   Translator.englishToGerman27
                    Translator.englishToGerman6) -}
-9218c9a97d36493eab625672e57694aa
+88c7aceab188695ae498d73391651021
   englishToGerman6 :: [(Translator.English, Translator.German)]
   {- Unfolding: (GHC.Types.:
                    @ (Translator.English, Translator.German)
-                   Translator.englishToGerman10
+                   Translator.englishToGerman24
                    Translator.englishToGerman7) -}
-294934757c7fcb3f49cad5e8b665b2d9
+8655643d881193fecbb542cef0357d85
   englishToGerman7 :: [(Translator.English, Translator.German)]
   {- Unfolding: (GHC.Types.:
                    @ (Translator.English, Translator.German)
-                   Translator.englishToGerman8
-                   (GHC.Types.[] @ (Translator.English, Translator.German))) -}
-65a72b4ad05fbac2daa72574c89532cb
-  englishToGerman8 :: ([GHC.Types.Char], [GHC.Types.Char])
-  {- Unfolding: ((Translator.englishToGerman9,
-                  Translator.germanToChinese11)) -}
-f3f6476d3d395c8bee79e2559740d6e4
-  englishToGerman9 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "comfort"#) -}
-70271bedf3d86e4fac5baef4373b9c22
+                   Translator.englishToGerman22
+                   Translator.englishToGerman8) -}
+cb56208dd085b6061978eff588342b8f
+  englishToGerman8 :: [(Translator.English, Translator.German)]
+  {- Unfolding: (GHC.Types.:
+                   @ (Translator.English, Translator.German)
+                   Translator.englishToGerman20
+                   Translator.englishToGerman9) -}
+f2b1583973b1d81b3a4d31bab3c5656a
+  englishToGerman9 :: [(Translator.English, Translator.German)]
+  {- Unfolding: (GHC.Types.:
+                   @ (Translator.English, Translator.German)
+                   Translator.englishToGerman18
+                   Translator.englishToGerman10) -}
+45b76eb4cf2aadc807a44839d726b516
   gerToCh :: Translator.German -> GHC.Base.Maybe Translator.Chinese
   {- Arity: 1, Strictness: <S,1*U>,
      Unfolding: InlineRule (1, True, False)
@@ -446,7 +576,7 @@ f3f6476d3d395c8bee79e2559740d6e4
                    @ [GHC.Types.Char]
                    g
                    Translator.germanToChinese) -}
-6638cb3463499a078d98ff92daa13c1d
+5ed9282e2bc58a48b35ce3f50a21d77c
   gerToEng :: Translator.German -> GHC.Base.Maybe Translator.English
   {- Arity: 1, Strictness: <S,1*U>,
      Unfolding: InlineRule (1, True, False)
@@ -455,141 +585,167 @@ f3f6476d3d395c8bee79e2559740d6e4
                    @ [GHC.Types.Char]
                    g
                    Translator.germanToEnglish) -}
-b2c60b14f212176ad302bd6d8fcda616
+e86ea3e04d87c27a48b42d543fe72b1b
   germanToChinese ::
     Data.Map.Base.Map Translator.German Translator.Chinese
   {- Unfolding: (Translator.$sfromList
                    @ [GHC.Types.Char]
                    Translator.germanToChinese1) -}
-5ef4be61144cab3ab896f8c312a52ba3
+cc8b3e4c75e76e3f3468ee9030529420
   germanToChinese1 :: [(Translator.German, Translator.Chinese)]
   {- Unfolding: (GHC.Types.:
                    @ (Translator.German, Translator.Chinese)
-                   Translator.germanToChinese29
+                   Translator.germanToChinese35
                    Translator.germanToChinese2) -}
-a178eae96172e5e7e2a793ec7b6b5a58
-  germanToChinese10 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCStringUtf8#
-                   "\\229\\174\\137\\230\\133\\176"#) -}
-d2124fa548abb151a2d5e8902ef46e1b
-  germanToChinese11 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "Trost"#) -}
-225cba67d5b12ee2eda973b25537fec1
-  germanToChinese12 :: ([GHC.Types.Char], [GHC.Types.Char])
+d1470b09ae64c5d8ce09bc77fd88c3ee
+  germanToChinese10 :: [(Translator.German, Translator.Chinese)]
+  {- Unfolding: (GHC.Types.:
+                   @ (Translator.German, Translator.Chinese)
+                   Translator.germanToChinese11
+                   (GHC.Types.[] @ (Translator.German, Translator.Chinese))) -}
+9b1d093a7b1f90ece23f95bdb5be3305
+  germanToChinese11 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.germanToChinese12,
+                  Translator.englishToChinese14)) -}
+11cfbdc81a8495814e5e2579dddfca99
+  germanToChinese12 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Frau"#) -}
+dcf2672b8e42c79a7e76945c3ca74626
+  germanToChinese13 :: ([GHC.Types.Char], [GHC.Types.Char])
   {- Unfolding: ((Translator.germanToChinese14,
-                  Translator.germanToChinese13)) -}
-9faec014a1b35c199263174cf0cc3a19
-  germanToChinese13 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCStringUtf8#
-                   "\\229\\190\\183\\229\\155\\189"#) -}
-23b4105b5e2bd1452c6e27a8eb583e13
+                  Translator.englishToChinese17)) -}
+a154b1af03f3b63c86448211fb6442e0
   germanToChinese14 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "Deutschland"#) -}
-9aedd3679dc45043f5a3151a52ee23c0
+  {- Unfolding: (GHC.CString.unpackCString# "Mann"#) -}
+064b353f95523f04025110db4279a918
   germanToChinese15 :: ([GHC.Types.Char], [GHC.Types.Char])
   {- Unfolding: ((Translator.germanToChinese17,
                   Translator.germanToChinese16)) -}
-bf4c7154d20ff4ef91c3780029cd50f3
+5269a687cde4d218716514821d812ad9
   germanToChinese16 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCStringUtf8#
-                   "\\232\\176\\162\\232\\176\\162"#) -}
-144906f3e18d579ebe83c1db3028a560
+                   "\\229\\174\\137\\230\\133\\176"#) -}
+ecb94f7e1b3dc5c6dc12de75225c6c26
   germanToChinese17 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "Danke"#) -}
-cfab86338ca33944cf4c6bcd2a762810
+  {- Unfolding: (GHC.CString.unpackCString# "Trost"#) -}
+7699187ed08dbeac9834548eba28618e
   germanToChinese18 :: ([GHC.Types.Char], [GHC.Types.Char])
   {- Unfolding: ((Translator.germanToChinese20,
                   Translator.germanToChinese19)) -}
-5416c3fcf1d3474f2b6fae493b6743c2
+b6bb5e90c06c44eec6b0afe54bec146e
   germanToChinese19 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCStringUtf8#
-                   "\\232\\139\\185\\230\\158\\156"#) -}
-726d51fee1ed2d5ed2ce984f5d316b9d
+                   "\\229\\190\\183\\229\\155\\189"#) -}
+7d28145dcd77bb56a3506d6f0883695e
   germanToChinese2 :: [(Translator.German, Translator.Chinese)]
   {- Unfolding: (GHC.Types.:
                    @ (Translator.German, Translator.Chinese)
-                   Translator.germanToChinese26
+                   Translator.germanToChinese32
                    Translator.germanToChinese3) -}
-e738c7bbd52db94246135676dd4d62a3
+f366249206dae6e7420bbd6bd6646a2c
   germanToChinese20 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "Apfel"#) -}
-0d8e2de0360060fcf5dddade44ed7e5d
+  {- Unfolding: (GHC.CString.unpackCString# "Deutschland"#) -}
+79522352ea098ac84550dc4ae4c8315b
   germanToChinese21 :: ([GHC.Types.Char], [GHC.Types.Char])
   {- Unfolding: ((Translator.germanToChinese23,
                   Translator.germanToChinese22)) -}
-e32a24432c016f3cb1917902e70feb94
+64079bfd29966ed6556ad979b5e545c2
   germanToChinese22 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCStringUtf8#
-                   "\\229\\156\\159\\232\\177\\134"#) -}
-118cb577cd628a7f5f92986fd0ee7849
+                   "\\232\\176\\162\\232\\176\\162"#) -}
+e025ccfc4cac93449068c90610ddd120
   germanToChinese23 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "Kartofel"#) -}
-92c8bb56dc022ffcd57273feded50bf2
+  {- Unfolding: (GHC.CString.unpackCString# "Danke"#) -}
+78a96b47e26a0056c355b76e96196f4a
   germanToChinese24 :: ([GHC.Types.Char], [GHC.Types.Char])
-  {- Unfolding: ((Translator.germanToChinese25,
-                  Translator.englishToChinese28)) -}
-994386269fc87bcfea2f3c5e16967bbe
+  {- Unfolding: ((Translator.germanToChinese26,
+                  Translator.germanToChinese25)) -}
+5b725da63a23ea7b1fc3e83f8fec95e2
   germanToChinese25 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "Auf Wiedersehen"#) -}
-2db2a70c0a87c8f5d7a23d29f99a99d1
-  germanToChinese26 :: ([GHC.Types.Char], [GHC.Types.Char])
-  {- Unfolding: ((Translator.germanToChinese28,
-                  Translator.germanToChinese27)) -}
-4055c1661353621f44fafbb5daec594a
-  germanToChinese27 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCStringUtf8#
-                   "\\230\\151\\169\\228\\184\\138\\229\\165\\189"#) -}
-0f78b83f447d8f45003c5b3fb750844f
+                   "\\232\\139\\185\\230\\158\\156"#) -}
+92e8fbd6314ca870d5bc0d1dcd711632
+  germanToChinese26 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Apfel"#) -}
+9ad61c5686b398a6486de2226a048591
+  germanToChinese27 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.germanToChinese29,
+                  Translator.germanToChinese28)) -}
+c82d55ff9433394738dfd1b832c3316c
   germanToChinese28 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "Guten Morgen"#) -}
-012a4d0e5847654d132c5a05bca2f803
-  germanToChinese29 :: ([GHC.Types.Char], [GHC.Types.Char])
-  {- Unfolding: ((Translator.germanToChinese30,
-                  Translator.englishToChinese31)) -}
-9f4a926c620e4d2445779ae7d6c57173
+  {- Unfolding: (GHC.CString.unpackCStringUtf8#
+                   "\\229\\156\\159\\232\\177\\134"#) -}
+38b6ca1dd2a72da57a8c58784f42327e
+  germanToChinese29 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Kartofel"#) -}
+338a4e7792ed91d424d9f2cb591b6230
   germanToChinese3 :: [(Translator.German, Translator.Chinese)]
   {- Unfolding: (GHC.Types.:
                    @ (Translator.German, Translator.Chinese)
-                   Translator.germanToChinese24
+                   Translator.germanToChinese30
                    Translator.germanToChinese4) -}
-4e4ba877a5388ab652463be0467a6129
-  germanToChinese30 :: [GHC.Types.Char]
+5419d539685a3bbec5f8e0a7685f3c59
+  germanToChinese30 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.germanToChinese31,
+                  Translator.englishToChinese44)) -}
+de6ae18f884f6e94546f54e385f15fde
+  germanToChinese31 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Auf Wiedersehen"#) -}
+94380f55e6ab80cbb3faf64e9b99617b
+  germanToChinese32 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.germanToChinese34,
+                  Translator.germanToChinese33)) -}
+758ea9658775b0640d7bce2169a7e8f3
+  germanToChinese33 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCStringUtf8#
+                   "\\230\\151\\169\\228\\184\\138\\229\\165\\189"#) -}
+9376a32802a6772522f96220fc52774a
+  germanToChinese34 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Guten Morgen"#) -}
+c93f4ec11c47950b6861a5892b66674c
+  germanToChinese35 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- Unfolding: ((Translator.germanToChinese36,
+                  Translator.englishToChinese47)) -}
+a05f24305638c26be1c1502932074a86
+  germanToChinese36 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Guten Tag"#) -}
-ee7cf85fc5673b3de5cf7b34d14f98a4
+bd90d0c5c2e2e125834859bb643a4f92
   germanToChinese4 :: [(Translator.German, Translator.Chinese)]
   {- Unfolding: (GHC.Types.:
                    @ (Translator.German, Translator.Chinese)
-                   Translator.germanToChinese21
+                   Translator.germanToChinese27
                    Translator.germanToChinese5) -}
-49a5836456c9ee6cadb6cdbbaa1820e7
+85702f7d01ed4c55513c3b27680239a6
   germanToChinese5 :: [(Translator.German, Translator.Chinese)]
   {- Unfolding: (GHC.Types.:
                    @ (Translator.German, Translator.Chinese)
-                   Translator.germanToChinese18
+                   Translator.germanToChinese24
                    Translator.germanToChinese6) -}
-89c947ae8560fe274cd833b26b4a3238
+6f872635be265ac0239ddaff4cd46812
   germanToChinese6 :: [(Translator.German, Translator.Chinese)]
   {- Unfolding: (GHC.Types.:
                    @ (Translator.German, Translator.Chinese)
-                   Translator.germanToChinese15
+                   Translator.germanToChinese21
                    Translator.germanToChinese7) -}
-21f0933f97b58519ac4013be97c67ea9
+6de64752c41982cbee54847c88a44e38
   germanToChinese7 :: [(Translator.German, Translator.Chinese)]
   {- Unfolding: (GHC.Types.:
                    @ (Translator.German, Translator.Chinese)
-                   Translator.germanToChinese12
+                   Translator.germanToChinese18
                    Translator.germanToChinese8) -}
-e90dea2de3999106cbd615b2dfcb6e17
+72e3b0bfe5cc6b5a88fb88cd3e4b8683
   germanToChinese8 :: [(Translator.German, Translator.Chinese)]
   {- Unfolding: (GHC.Types.:
                    @ (Translator.German, Translator.Chinese)
-                   Translator.germanToChinese9
-                   (GHC.Types.[] @ (Translator.German, Translator.Chinese))) -}
-7eb528eaba6b8f1b94e850a0fc04a5ab
-  germanToChinese9 :: ([GHC.Types.Char], [GHC.Types.Char])
-  {- Unfolding: ((Translator.germanToChinese11,
-                  Translator.germanToChinese10)) -}
-e8676802eb600f69aef20dd2f6adbd4e
+                   Translator.germanToChinese15
+                   Translator.germanToChinese9) -}
+634b75c750f416c53a382fb08e138f3e
+  germanToChinese9 :: [(Translator.German, Translator.Chinese)]
+  {- Unfolding: (GHC.Types.:
+                   @ (Translator.German, Translator.Chinese)
+                   Translator.germanToChinese13
+                   Translator.germanToChinese10) -}
+10caf4171b1f95e35c53bf36cc1e71f6
   germanToEnglish ::
     Data.Map.Base.Map Translator.German Translator.English
   {- Unfolding: (Translator.germanToEnglish_go10

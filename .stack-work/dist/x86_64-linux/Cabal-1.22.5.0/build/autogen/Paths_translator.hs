@@ -16,11 +16,11 @@ version :: Version
 version = Version [0,1,0,0] []
 bindir, libdir, datadir, libexecdir, sysconfdir :: FilePath
 
-bindir     = "/home/vagrant/src/translator/.stack-work/install/x86_64-linux/lts-6.5/7.10.3/bin"
-libdir     = "/home/vagrant/src/translator/.stack-work/install/x86_64-linux/lts-6.5/7.10.3/lib/x86_64-linux-ghc-7.10.3/translator-0.1.0.0-7Z1wDWZ3VSoEPaDaYBr3lm"
-datadir    = "/home/vagrant/src/translator/.stack-work/install/x86_64-linux/lts-6.5/7.10.3/share/x86_64-linux-ghc-7.10.3/translator-0.1.0.0"
-libexecdir = "/home/vagrant/src/translator/.stack-work/install/x86_64-linux/lts-6.5/7.10.3/libexec"
-sysconfdir = "/home/vagrant/src/translator/.stack-work/install/x86_64-linux/lts-6.5/7.10.3/etc"
+bindir     = "/home/zhangli/src/translator/.stack-work/install/x86_64-linux/lts-6.5/7.10.3/bin"
+libdir     = "/home/zhangli/src/translator/.stack-work/install/x86_64-linux/lts-6.5/7.10.3/lib/x86_64-linux-ghc-7.10.3/translator-0.1.0.0-7Z1wDWZ3VSoEPaDaYBr3lm"
+datadir    = "/home/zhangli/src/translator/.stack-work/install/x86_64-linux/lts-6.5/7.10.3/share/x86_64-linux-ghc-7.10.3/translator-0.1.0.0"
+libexecdir = "/home/zhangli/src/translator/.stack-work/install/x86_64-linux/lts-6.5/7.10.3/libexec"
+sysconfdir = "/home/zhangli/src/translator/.stack-work/install/x86_64-linux/lts-6.5/7.10.3/etc"
 
 getBinDir, getLibDir, getDataDir, getLibexecDir, getSysconfDir :: IO FilePath
 getBinDir = catchIO (getEnv "translator_bindir") (\_ -> return bindir)

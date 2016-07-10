@@ -34,6 +34,8 @@ englishToChinese = M.fromList [
   , ("Functional Programming", "函数式编程")
   , ("Signal Vine", "信号藤")
   , ("bamboo flute", "竹笛")
+  , ("man", "男人")
+  , ("woman", "女人")
   ]
 
 germanToChinese :: (M.Map German Chinese)
@@ -46,6 +48,8 @@ germanToChinese = M.fromList [
   , ("Danke", "谢谢")
   , ("Deutschland", "德国")
   , ("Trost", "安慰")
+  , ("Mann", "男人")
+  , ("Frau", "女人")
   ]
 
 englishToGerman :: (M.Map English German)
@@ -60,6 +64,8 @@ englishToGerman = M.fromList [
   , ("potato", "Kartofel")
   , ("apple", "Apfel")
   , ("water", "Wasser")
+  , ("woman", "Frau")
+  , ("man", "Mann")
   ]
 
 chineseToEnglish :: M.Map Chinese English
