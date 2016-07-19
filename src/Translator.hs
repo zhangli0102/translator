@@ -50,6 +50,7 @@ germanToChinese = M.fromList [
   , ("Trost", "安慰")
   , ("Mann", "男人")
   , ("Frau", "女人")
+  , ("Brot", "面包")
   ]
 
 englishToGerman :: (M.Map English German)
@@ -66,6 +67,7 @@ englishToGerman = M.fromList [
   , ("water", "Wasser")
   , ("woman", "Frau")
   , ("man", "Mann")
+  , ("bread", "Brot")
   ]
 
 chineseToEnglish :: M.Map Chinese English

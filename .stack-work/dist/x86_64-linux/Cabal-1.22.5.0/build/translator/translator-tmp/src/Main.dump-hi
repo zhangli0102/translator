@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2016-07-10 23:10:00.063655 UTC
+2016-07-19 16:51:51.010401 UTC
 
 interface main@main:Main 7103
-  interface hash: ea7bb222ebdaeba8443c30e2c4b458a7
+  interface hash: 06b9ad1d687cef742bf715291e8d25ec
   ABI hash: 2aa47a3212d20997743fc8920b4decc8
   export-list hash: e01985c29426ff5e8fe9c2c6a52e1214
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
@@ -42,14 +42,14 @@ import  -/  base-4.8.2.0:System.Environment ba6e36000c8274703cf7786fbe8d0f6c
 import  -/  base-4.8.2.0:System.Exit f5581af4ad998e898da01fdc74c2769b
 import  -/  base-4.8.2.0:System.IO 0248c1e850b7ea124cf7a2e1669ebf67
 import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
-import  -/  Translator f85846d909726b5a0cf64de1b13128a6
+import  -/  Translator 850c29232b0c25097f47bdf6ed046350
   exports: c9040bc7c4967adffb6a77546f42799f
   chToEng 1b0698d9c7fe3ec5a8e1c38406f476e6
-  chToGer 094d79a28df5ead984a6cd1c737c15a3
+  chToGer 536c4bf3032c7464e82fecc7c7a9f0e2
   engToCh 8e7639a99bedba1172ec498d9395779a
-  engToGer 0dd2f525b61c519ab269c4cac8de0811
-  gerToCh 45b76eb4cf2aadc807a44839d726b516
-  gerToEng 5ed9282e2bc58a48b35ce3f50a21d77c
+  engToGer 59f842b3fb76c5e52aa2e097bb5d4774
+  gerToCh 5906eec6c51f78a87a1b8f4148bec68a
+  gerToEng 9f97329ed5b278f7a7a67fa4f9a2b2dc
 2a17d82d52b12f3cf566801abfeb537a
   chineseToEnglish :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <L,U>,
