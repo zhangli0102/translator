@@ -36,6 +36,7 @@ englishToChinese = M.fromList [
   , ("bamboo flute", "竹笛")
   , ("man", "男人")
   , ("woman", "女人")
+  , ("computer", "计算机")
   ]
 
 germanToChinese :: (M.Map German Chinese)
